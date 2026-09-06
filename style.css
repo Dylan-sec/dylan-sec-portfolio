@@ -144,6 +144,7 @@ code, .mono{ font-family: var(--font-mono); font-size: .92em; }
 
 /* mobile top bar */
 .topbar{ display:none; }
+.topbar__menu{ display:none; }
 
 @media (max-width: 880px){
   .shell{ flex-direction: column; }
