@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit Log · Dylan Bernard — Security Research</title>
+<meta name="description" content="Log of Red Team and Blue Team assessments carried out by Dylan Bernard, sorted by severity and track.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar__mark">DYLAN&nbsp;BERNARD</span>
+  <button class="topbar__toggle" aria-expanded="false">MENU</button>
+</div>
+<nav class="topbar__menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="reports.html" aria-current="page">Audit Log</a>
+  <a href="labs.html">Labs &amp; Projects</a>
+  <a href="methodology.html">Methodology</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="shell">
+  <aside class="rail">
+    <div class="rail__brand">
+      <a href="index.html">
+        <span class="rail__mark">Dylan Bernard</span>
+        <span class="rail__sub">SECURITY&nbsp;RESEARCH</span>
+      </a>
+    </div>
+    <nav class="rail__nav">
+      <a class="rail__tab" href="index.html"><span class="idx">00</span>Home</a>
+      <a class="rail__tab" href="about.html"><span class="idx">01</span>About</a>
+      <a class="rail__tab" href="reports.html" aria-current="page"><span class="idx">02</span>Audit Log</a>
+      <a class="rail__tab" href="labs.html"><span class="idx">03</span>Labs &amp; Projects</a>
+      <a class="rail__tab" href="methodology.html"><span class="idx">04</span>Methodology</a>
+      <a class="rail__tab" href="contact.html"><span class="idx">05</span>Contact</a>
+    </nav>
+    <div class="rail__footer">© 2026 Dylan Bernard<br><a href="assets/CV_Dylan_Bernard.pdf" class="rail__cv">Download my CV ↓</a></div>
+  </aside>
+
+  <main class="main">
+    <div class="container">
+
+      <div class="classified">AUDIT LOG — CONTINUOUSLY UPDATED</div>
+
+      <h1>Audit log</h1>
+      <p>
+        Each entry corresponds to a simulated engagement, carried out on a retired target
+        (HackTheBox, TryHackMe, LetsDefend or equivalent) and documented like a client
+        deliverable: scope, method, evidence and recommendations.
+      </p>
+
+      <div class="filters">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="red">Red Team</button>
+        <button class="filter-btn" data-filter="blue">Blue Team</button>
+      </div>
+
+      <div class="legend">
+        <div class="sev sev--critical"><span class="sev__mark"></span>Critical</div>
+        <div class="sev sev--high"><span class="sev__mark"></span>High</div>
+        <div class="sev sev--medium"><span class="sev__mark"></span>Medium</div>
+        <div class="sev sev--low"><span class="sev__mark"></span>Low</div>
+        <div class="sev sev--info"><span class="sev__mark"></span>Informational</div>
+      </div>
+      <p class="legend__note" style="margin-top:-1.5rem;">
+        Red Team severity rated on the CVSS 3.1 / 4.0 scale. Blue Team severity rated on the
+        business criticality of the simulated incident. Details on the
+        <a href="methodology.html" style="text-decoration:underline;">Methodology</a> page.
+      </p>
+
+      <div class="log">
+
+        <article class="log-entry log-entry--red" data-track="red">
+          <div class="log-entry__id">RT-01<span class="track-tag">RED TEAM</span></div>
+          <div>
+            <h3 class="log-entry__title">Active — HackTheBox</h3>
+            <div class="log-entry__meta mono">BLACK BOX · AD · 09/07/2026</div>
+            <p class="log-entry__desc">Anonymous SMB access → decrypted GPP password → Kerberoasting on the Administrator account → offline crack → confirmed Domain Admin access.</p>
+            <a class="log-entry__link" href="assets/reports/active-htb.pdf">View report (PDF) →</a>
+          </div>
+          <div class="log-entry__sev">
+            <div class="sev sev--high"><span class="sev__mark"></span>High</div>
+          </div>
+        </article>
+
+        <!-- placeholder, fill in and uncomment when ready:
+<article class="log-entry log-entry--blue" data-track="blue">
+          <div class="log-entry__id">BT-01<span class="track-tag">BLUE TEAM</span></div>
+          <div>
+            <h3 class="log-entry__title">[Scenario name] — Incident investigation</h3>
+            <div class="log-entry__meta mono">SOC SIMULATION · [MONTH YYYY]</div>
+            <p class="log-entry__desc">[Initial alert, hypotheses ruled out, indicator retained, containment measures.]</p>
+          </div>
+          <div class="log-entry__sev">
+            <div class="sev sev--high"><span class="sev__mark"></span>High</div>
+          </div>
+        </article>
+-->
+
+        <!-- placeholder, fill in and uncomment when ready:
+<article class="log-entry log-entry--red" data-track="red">
+          <div class="log-entry__id">RT-02<span class="track-tag">RED TEAM</span></div>
+          <div>
+            <h3 class="log-entry__title">[Target name] — Web application</h3>
+            <div class="log-entry__meta mono">BLACK BOX · WEB · [MONTH YYYY]</div>
+            <p class="log-entry__desc">[Application vulnerability exploited, authentication bypass, data access.]</p>
+          </div>
+          <div class="log-entry__sev">
+            <div class="sev sev--medium"><span class="sev__mark"></span>Medium</div>
+          </div>
+        </article>
+-->
+
+        <!-- placeholder, fill in and uncomment when ready:
+<article class="log-entry log-entry--blue" data-track="blue">
+          <div class="log-entry__id">BT-02<span class="track-tag">BLUE TEAM</span></div>
+          <div>
+            <h3 class="log-entry__title">[Scenario name] — Detection rule</h3>
+            <div class="log-entry__meta mono">DETECTION ENGINEERING · [MONTH YYYY]</div>
+            <p class="log-entry__desc">[Targeted MITRE ATT&amp;CK technique, rule logic written, observed false-positive rate.]</p>
+          </div>
+          <div class="log-entry__sev">
+            <div class="sev sev--low"><span class="sev__mark"></span>Low</div>
+          </div>
+        </article>
+-->
+
+        <!-- placeholder, fill in and uncomment when ready:
+<article class="log-entry log-entry--red" data-track="red">
+          <div class="log-entry__id">RT-03<span class="track-tag">RED TEAM</span></div>
+          <div>
+            <h3 class="log-entry__title">[Target name] — Network infrastructure</h3>
+            <div class="log-entry__meta mono">GREY BOX · INFRA · [MONTH YYYY]</div>
+            <p class="log-entry__desc">[Misconfigured service identified, network pivot, final scope of the compromise.]</p>
+          </div>
+          <div class="log-entry__sev">
+            <div class="sev sev--info"><span class="sev__mark"></span>Informational</div>
+          </div>
+        </article>
+-->
+
+      </div>
+
+      <p class="empty-state">No case files in this track yet.</p>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
